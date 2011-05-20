@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle} | Justin Dickinson</title>
+    <link rel="icon" href="http://justindickinson.com/favicon.ico"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+    <meta name="title" content="{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle} | Justin Dickinson" />
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+    <meta name="keywords" content="ux, ia, web design, web development, new york, brooklyn, justin dickinson" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="en" />
+    <meta name="viewport" content="width=1070"/> <!-- iPhone -->
+    
+    <meta name="text:Disqus Shortname" content="" />
+    
+    <style type="text/css">
+			body, html { background: #fff; margin:0px; padding:0px; border-top:3px solid #281f06; font-family: Georgia, 'Times New Roman', Times; font-size:16px; line-height:150%; color:#333; }
+			.clear{clear:both;display:block;overflow:hidden;width:0;height:0}
+      pre { font-size: 10px; }
+      a { color:#333; text-decoration: none; padding: 1px 2px; background: #ffe181; }
+      a.nobg{ background: transparent }
+      a:hover { color: #dfa321; background: none; }
+      h1 { margin-bottom:0;padding-left:55px;background:transparent url("http://uploads.justindickinson.com/mark-brown-blue.png") no-repeat scroll 0 0 ;font-family:Clarendon,Georgia,'Times New Roman',serif;font-weight:normal;letter-spacing:-1px;color:#666666;}
+      h2 { margin-bottom:0;font-family:Clarendon,Georgia,'Times New Roman',serif;font-size:2em;font-weight:normal;line-height:1.1;letter-spacing:-1px;color:#444;}
+      h3 { color:#666; font-weight: normal !important; margin-bottom:0px; }
+      h4 { color:#666; font-weight: normal; margin-bottom:0px; }
+      img { background: #fff !important; border: 1px solid #ccc; padding: 5px; margin: 0px; }
+      img a { text-decoration: none !important; background: #fff !important; margin: 0px; }
+      blockquote{border-left:5px solid #e0e0e0;margin-left:1.2em;padding-left:1em;}
+      input { padding:3px; border: 1px solid #999; font-size: 14px}
+      input:active{border-color:#66281c}
+      .photo a, .disqus a { text-decoration: none !important; background: #fff !important; }
+      .header { position: absolute; left: 584px ; margin-bottom: 20px; }
+      .header h1{margin-bottom:35px;font-size:1.2em;text-shadow:1px 1px #d9d9d9;font-family:georgia,times New Roman,serif;}
+      .header h1 a{font-size:1.5em;font-style:normal;line-height:1.1;text-shadow:2px 1px #DDDDDD;color:#66281c;}
+      .header a{background-color: transparent;color:#dfa321;}
+      .header a:hover{color:#66a4c7}
+      .header p{font-size: 0.9em;color:#666}
+      .header p img{float:right;margin-left:10px}
+      .wrapper { position: relative; width: 850px; margin: 100px auto; }
+      .main { width: 520px; margin: 50px 0px; }
+      .datetime { font-size: 12px; line-height: 150%; color: #666; position:relative; float:left; margin-left:-250px; padding-right: 25px; border-right: 1px solid #999; width: 200px; text-align: right; clear: both; }
+      .datetime a{background-color: transparent;color:#66281c;}
+      .datetime a:hover{color:#66a4c7}
+      .navleft { font-size: 12px; position: relative; float: left; }
+      .navright { font-size: 12px; position: relative; float: right; }
+      .navcenter { text-align:center; }
+      .btm_archive { margin-bottom:50px; }
+      .post { width: 520px; padding-bottom: 30px; }
+      .regular_post p img{float:left;max-width: 730px; margin:20px 20px 60px -210px;}
+      .regular_post p object{margin:20px 20px 60px -180px;}
+      .short_quote { margin: 0px; padding: 0px; font-size:62px; line-height: 110%; letter-spacing: -3px; color: #666; } 
+      .medium_quote { margin: 0px; padding: 0px; font-size:36px; line-height: 115%; letter-spacing: -2px; color: #666; } 
+      .long_quote { margin: 0px; padding: 0px; font-size:26px; line-height: 130%; letter-spacing: -1px; color: #666; } 
+      a .notes { text-decoration: none !important; background: none; } 
+      .notes a { text-decoration: none !important; background: none; } 
+      img .notes { margin: 0px; padding: 3px; border: 1px solid #999; } 
+      .notes img { margin: 0px; padding: 3px; border: 1px solid #999; } 
+      .disqus { font-family: Georgia, 'Times New Roman', Times !important; size: 16px; line-height:150% !important; color:#333 !important; }
+      .comments_preview{margin:30px auto 20px;padding:5px;border:1px solid #CCCCCC;font-size:12px;}
+      .comments_preview a{float:left;background: transparent}
+      .comments_preview a.commentstoggle{float:right}
+      .hideme{display: none}
+
+.regular_post_body img {
+max-width: 100%;
+}
+
+{CustomCSS}
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+				$('a.commentscount').click(function(){
+					$('div#disqus_thread').toggleClass('hideme');
+				});
+				
+				$('a.commentstoggle').click(function(){
+					$('div#disqus_thread').toggleClass('hideme');
+					return false ;
+				});
+				
+				$('a:has(img)').addClass('nobg');
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1><a href="/">Justin Dickinson</a><br />{Title}</h1>
+        <p><img src="{PortraitURL-48}" alt="Justin Dickinson" /> {Description}</p>
+        <div class="navcenter">
+          <form action="/search" method="get">
+            <a href="/">home</a>&nbsp;&nbsp;<a href="/archive/">archive</a>&nbsp;&nbsp;<a href="/mobile">mobile</a>&nbsp;&nbsp;<a href="{RSS}">rss</a>&nbsp;&nbsp;<input type="text" name="q" value="{SearchQuery}"/>&nbsp;&nbsp;<input type="submit" value="Search"/>
+          </form>
+        </div>
+      </div>
+      <div class="main">
+        {block:SearchPage}
+        <div class="post">
+          <div class="datetime">
+            {SearchResultCount} result(s)
+          </div>
+          searched for <em>{SearchQuery}</em></h2>
+        </div>
+        {/block:SearchPage}
+        {block:Posts}
+        <div class="post">
+          <div class="datetime">
+            {block:NewDayDate}<a href="{Permalink}">{Month} {DayOfMonth}, {Year} at {/block:NewDayDate}{12Hour}:{Minutes}{AmPm}</a><br />
+            {block:IfDisqusShortname}<a href="{Permalink}#disqus_thread" class="commentscount"></a><br />{block:IfDisqusShortname}
+            {block:Pagination}
+            {NoteCountWithLabel}<br />
+            {/block:Pagination}
+            {block:SearchPage}
+            {NoteCountWithLabel}<br />
+            {/block:SearchPage}
+            {block:PermalinkPage}
+            <a href="/">home</a><br />
+            {/block:PermalinkPage}
+            {block:RebloggedFrom}reblogged from <a href="{ReblogParentURL}">{ReblogRootName}</a><br />{/block:RebloggedFrom}
+          </div>
+        {block:Regular}
+          {block:Title}<h2>{Title}</h2>{/block:Title}
+          <div class="regular_post">
+          <p class="regular_post_body">{Body}</p>
+          </div>
+        {/block:Regular}
+
+        {block:Photo}
+          <span class="photo">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" title="{PhotoAlt}">{LinkCloseTag}</span>
+          <p>{Caption}</p>
+        {/block:Photo}
+
+        {block:Quote}
+          <p><span class="{Length}_quote">{Quote}</span></p>
+          {block:Source}<p>&mdash;&nbsp;{Source}</p>{/block:Source}
+        {/block:Quote}
+
+        {block:Video}
+          {Video-500}
+          <p>{Caption}</p>
+        {/block:Video}
+
+        {block:Audio}
+          {AudioPlayerGrey}
+          <p>{Caption}</p>
+        {/block:Audio}
+
+        {block:Link}
+          <h2><a href="{URL}" {Target}>{Name}</a>&nbsp;&rarr;</h2>
+          {block:Description}<p>{Description}</p>{/block:Description}
+        {/block:Link}
+
+        {block:Conversation}
+          {block:Title}<h2>{Title}</h2>{/block:Title}
+          <p>
+          {block:Lines}
+          {block:Label}<strong>{Label}</strong>{/block:Label} {Line}<br />
+          {/block:Lines}
+          </p>
+        {/block:Conversation}
+        </div>
+        {/block:Posts}
+
+        {block:PermalinkPage}
+        {block:PostNotes}
+        <div class="post">
+          <h3>Notes</h3>
+          <p>{PostNotes}</p>
+        </div>
+        {/block:PostNotes}
+        
+        
+        {block:Pagination}
+        {block:NextPage}
+        <div class="navleft">
+          &larr;&nbsp;<a href="{NextPage}">next</a>
+        </div>
+        {/block:NextPage}
+        {block:PreviousPage}
+        <div class="navright">
+          <a href="{PreviousPage}">previous</a>&nbsp;&rarr;
+        </div>
+        {/block:PreviousPage}
+        <div class="navcenter">
+          <span class="long_quote">{CurrentPage}.</span>
+        </div>
+        {/block:Pagination}
+        
+        {block:PermalinkPagination}
+        {block:NextPost}
+        <div class="navleft">
+          &larr;&nbsp;<a href="{NextPost}">next post</a>
+        </div>
+        {/block:NextPost}
+        {block:PreviousPost}
+        <div class="navright">
+          <a href="{PreviousPost}">previous post</a>&nbsp;&rarr;
+        </div>
+        {/block:PreviousPost}
+        <div class="clear"></div>
+        {/block:PermalinkPagination}
+        
+        
+        {block:IfDisqusShortname}
+        <div class="comments_preview">
+        	<a href="{Permalink}#disqus_thread" class="commentscount"></a>
+        	<a href="#" class="commentstoggle">Show Comments</a>
+        	<div class="clear"></div>
+        </div>
+        {block:IfDisqusShortname}
+        
+        <div class="post disqus">
+            {block:IfDisqusShortname}
+            {block:Permalink}
+            <div id="disqus_thread" class="hideme"></div>
+            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+            {/block:Permalink}
+            {/block:IfDisqusShortname}
+        </div>
+        {/block:PermalinkPage}
+
+
+      </div>
+      <div class="post">
+      	<div class="btm_archive">
+      		<h2><a href="/archive">View more posts in the archive &raquo;</a></h2>
+      	</div>
+      </div>
+      
+      <div class="navcenter">
+          Powered by <a href="http://www.tumblr.com">Tumblr</a>.
+        </div>
+    </div>
+    
+    {block:IfDisqusShortname}
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+    </script>
+    {/block:IfDisqusShortname}
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1828508-15");
+pageTracker._setDomainName(".justindickinson.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+  </body>
+</html>
