@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="96px" viewBox="0 0 59 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>logo/jmd/chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-199.000000, -75.000000)">
+            <g id="S1---Lead" transform="translate(199.000000, 75.000000)">
+                <g id="logo/jmd/chevron" transform="translate(29.500000, 48.000000) rotate(-180.000000) translate(-29.500000, -48.000000) ">
+                    <polygon id="Fill-1" fill="#24CEBB" points="0 40 29.5 20 59 40 59 20 29.5 0 0 20"></polygon>
+                    <polygon id="Fill-2" fill="#E7663C" points="0 68 29.5 48 59 68 59 48 29.5 28 0 48"></polygon>
+                    <polygon id="Fill-3" fill="#F0A58A" points="0 96 29.5 76 59 96 59 76 29.5 56 0 76"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
