@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="127px" height="14px" viewBox="0 0 127 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/ui/hr</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-151.000000, -3897.000000)">
+            <g id="S5---Bio" transform="translate(150.000000, 3749.000000)">
+                <g id="icon/ui/hr" transform="translate(1.000000, 148.000000)">
+                    <polygon id="Fill-1" fill="#24CEBB" points="77 14 90 5.83333333 103 14 103 8.16666667 90 0 77 8.16666667"></polygon>
+                    <polygon id="Fill-2" fill="#E7663C" points="52 14 64.6 5.83333333 77.2 14 77.2 8.16666667 64.6 0 52 8.16666667"></polygon>
+                    <polygon id="Fill-3" fill="#F0A58A" points="0 14 13 5.83333333 26 14 26 8.16666667 13 0 0 8.16666667"></polygon>
+                    <polygon id="Fill-2" fill="#E7663C" transform="translate(52.000000, 7.000000) scale(-1, -1) translate(-52.000000, -7.000000) " points="39 14 52 5.83333333 65 14 65 8.16666667 52 0 39 8.16666667"></polygon>
+                    <polygon id="Fill-3" fill="#F0A58A" transform="translate(26.000000, 7.000000) scale(-1, -1) translate(-26.000000, -7.000000) " points="13 14 26 5.83333333 39 14 39 8.16666667 26 0 13 8.16666667"></polygon>
+                    <polygon id="Fill-1-Copy" fill="#24CEBB" points="102 14 114.5 5.83333333 127 14 127 8.16666667 114.5 0 102 8.16666667"></polygon>
+                    <polygon id="Fill-1" fill="#24CEBB" transform="translate(102.500000, 7.000000) scale(-1, -1) translate(-102.500000, -7.000000) " points="90 14 102.5 5.83333333 115 14 115 8.16666667 102.5 0 90 8.16666667"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
