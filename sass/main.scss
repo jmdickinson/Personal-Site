@@ -59,7 +59,7 @@ h2 {
     font-size: 32px;
     font-weight: 800;
     line-height: 1.2;
-    letter-spacing: 1px;
+    letter-spacing: -0.7px;
     color: $black;
 }
 
@@ -271,12 +271,27 @@ a:hover {
 
     li {
         display: inline-block;
-        width: 11%;
+        width: 9%;
+        margin-right: 2%;
 
-        img {
-            display: block;
-            height: 20px;
-            margin: 0 auto;
+        a {
+            svg {
+                display: block;
+                max-width: 30px;
+                margin: 0 auto;
+                -webkit-transition: color 0.2s ease-out;
+                -moz-transition: color 0.2s ease-out;
+                -o-transition: color 0.2s ease-out;
+                -ms-transition: color 0.2s ease-out;
+                transition: color 0.2s ease-out;
+                fill: $grey;
+            }
+
+            &:hover {
+                svg {
+                    fill: $teal;
+                }
+            }
         }
     }
 }
