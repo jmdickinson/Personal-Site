@@ -17,6 +17,11 @@ $base_text: $grey;
 $base_link: $teal;
 $link_hover: $teal_dark;
 
+$baseline: 25px;
+$section_gap: $baseline * 6; /* 150px */
+$short_gap: $baseline * 4; /* 100px */
+$primary_margin: 130px / 1280px * 100%;
+
 html,
 body {
     margin: 0;
@@ -34,16 +39,21 @@ h1, h2, h3 {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
 
 .block {
     overflow: hidden;
     margin-top: 0px;
-    margin-bottom: 150px;
+    margin-bottom: $section_gap;
 
-    &.bio {
+    &.bio_contact {
         margin-bottom: 90px;
+    }
+
+    &.short_block {
+        margin-top: -1 * $short_gap;
     }
 }
 
@@ -55,12 +65,59 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 25px;
-    font-size: 32px;
+    margin-bottom: $baseline;
+    font-size: 26px;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: -0.7px;
     color: $black;
+}
+
+h3 {
+    margin-bottom: $baseline;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -0.77px;
+    color: $orange;
+}
+
+h4 {
+    margin: $baseline/2 0 $baseline;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -0.47px;
+    color: $pink;
+}
+
+.nav {
+    height: 30px;
+    padding: 15px $baseline;
+    overflow: hidden;
+
+    .logo {
+        float: left;
+        width: 18px;
+        margin-right: $baseline;
+    }
+
+    .breadcrumb {
+        float: left;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 2;
+    }
+
+    .back_link {
+        width: 200px;
+        float: right;
+        text-align: right;
+    }
 }
 
 .subtitle,
@@ -71,16 +128,54 @@ h2 {
 }
 
 .subtitle{
-    margin-top: 30px;
+    margin-top: $baseline;
     color: $grey;
 }
 
 p.text {
-    margin-bottom: 20px;
+    margin-bottom: $baseline;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
     color: $grey;
+}
+
+p.article_text {
+    margin-bottom: $baseline;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul.styled,
+ol.styled {
+    margin-top: $baseline;
+    padding-left: 18px;
+    list-style-type: disc;
+
+    li {
+        padding-left: 10px;
+        margin-bottom: $baseline / 2;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &.sml {
+        padding-left: 10px;
+
+        li {
+            font-size: 14px;
+        }
+    }
+}
+
+ol.styled {
+    list-style-type: decimal;
+}
+
+ul.link_list {
+    li {
+        margin-bottom: 5px;
+    }
 }
 
 a {
@@ -108,6 +203,14 @@ a {
         &:hover {
             background-image: url(/assets/images/icon/ui/primary-text-arrow-hover.svg);
         }
+
+        &.back_link {
+            background-image: url(/assets/images/icon/ui/back-link-arrow.svg);
+
+            &:hover {
+                background-image: url(/assets/images/icon/ui/back-link-arrow-hover.svg);
+            }
+        }
     }
 }
 
@@ -115,63 +218,178 @@ a:hover {
     color: $link_hover;
 }
 
+a.btn {
+    display: inline-block;
+    padding: 20px 60px;
+    background: $teal;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 800;
+    color: #fff;
+
+    &:hover {
+        background: $teal_dark;
+    }
+}
+
 .hero,
-.a_form,
-.b_form {
-    margin-left: 10%;
-    margin-right: 10%;
+.nonblock_content,
+.d_form,
+.d_form .a_col {
+    padding-left: $primary_margin;
+    padding-right: $primary_margin;
 }
 
 .hero {
-    margin-top: 50px;
+    margin-top: $baseline * 2;
 
     .logo {
         width: 40px;
-        margin-bottom: 50px;
+        margin-bottom: $baseline * 2;
+    }
+}
 
-        img {
-            display: block;
-            width: 100%;
+.nonblock_content {
+    margin-bottom: $section_gap / 2;
+}
+
+.case_study_header_container {
+    overflow: hidden;
+    margin-bottom: $section_gap / 2;
+
+    &.orange {
+        border-top: 5px solid $teal;
+
+        .case_study_header {
+            border-top: 5px solid $pink;
         }
+    }
+
+    &.pink {
+        border-top: 5px solid $teal;
+        
+        .case_study_header {
+            border-top: 5px solid $orange;
+        }
+    }
+
+    &.teal {
+        border-top: 5px solid $orange;
+
+        .case_study_header {
+            border-top: 5px solid $pink;
+        }
+    }
+}
+
+.case_study_header {
+    min-height: 490px;
+    background-size: 100% auto;
+
+    h1 {
+        width: 54.6875%; /* 700/1280 */
+        min-width: 400px;
+        margin-top: 225px;
+        margin-bottom: $baseline;
+        margin-left: $primary_margin;
+        color: #fff;
+    }
+
+    .summary {
+        width: 54.6875%; /* 700/1280 */
+        min-width: 400px;
+        margin-left: $primary_margin;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #fff;
+    }
+
+    &.profile_case_study {
+        background-image: url(/assets/images/case_study/profile/hero.jpg);
+    }
+
+    &.brand_case_study {
+        background-image: url(/assets/images/case_study/brand/hero.jpg);
+    }
+
+    &.nav_case_study {
+        background-image: url(/assets/images/case_study/nav/hero.jpg);
+    }
+}
+
+.case_study_overview {
+    .a_col {
+        float: left;
+        width: 54.6875%; /* 700/1280 */
+        margin-left: $primary_margin;
+        margin-right: 6.25%; /* 80/1280 */
+    }
+
+    .b_col {
+        float: left;
+        width: 17.1875%; /* 220/1280 */
     }
 }
 
 .a_form {
     .a_col {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 40px;
+        margin-bottom: $baseline;
+        padding: $baseline 0;
+        background-color: #f1f1f1;
+
+        img {
+            width: 54.6875%; /* 700/1280 */
+            margin: 0 auto;
+        }
+
+        &.orange_emphasis {
+          background: $orange;
+          background: -webkit-linear-gradient(left top, #f0a58a, $orange);
+          background: -o-linear-gradient(bottom right, #f0a58a, $orange);
+          background: -moz-linear-gradient(bottom right, #f0a58a, $orange);
+          background: linear-gradient(to bottom right, #f0a58a, $orange);
+        }
+
+        &.teal_emphasis {
+          background: $teal;
+          background: -webkit-linear-gradient(left top, #85e6dc, $teal);
+          background: -o-linear-gradient(bottom right, #85e6dc, $teal);
+          background: -moz-linear-gradient(bottom right, #85e6dc, $teal);
+          background: linear-gradient(to bottom right, #85e6dc, $teal);
+        }
     }
 
     .b_col {
-        margin-left: 16%;
-        margin-right: 16%;
-    }
-}
-
-.b_form,
-.bio {
-    .a_col {
-        float: left;
-        clear: left;
-    }
-
-    .b_col {
-        float: left;
+        width: 54.6875%; /* 700/1280 */
+        margin: 0 auto;
     }
 }
 
 .b_form {
+    .a_col,
+    .b_col {
+        float: left;
+    }
+
     .a_col {
-        width: 50%;
-        max-width: 475px;
-        margin-right: 5%;
+        /*max-width: 490px;*/
+        width: 38.28125%; /* 490/1280 */
+        margin-left: $primary_margin;
     }
 
     .b_col {
-        float: right;
-        width: 40%;
+        width: 31.25%; /* 400/1280 */
         margin-top: 10%;
+        margin-left: $primary_margin;
+
+        &.align_nudged {
+            margin-top: 5%;
+        }
+
+        &.align_top {
+            margin-top: 0;
+        }
     }
 }
 
@@ -191,16 +409,18 @@ a:hover {
         overflow: hidden;
     }
 
+    .b_col_double {
+        margin-left: $primary_margin;
+        margin-right: $primary_margin;
+        overflow: hidden;
+    }
+
     .title {
         float: left;
         width: 11%;
         max-width: 117px;
         margin-right: 5%;
         margin-top: 35px;
-
-        img {
-            fill: #202424;
-        }
     }
 
     .copy {
@@ -214,33 +434,73 @@ a:hover {
     }
 }
 
-.bio {
-    margin-left: 16%;
-    margin-right: 16%;
+.d_form {
+    .a_col {
+        margin-bottom:  $baseline;
+    }
 
+    .b_col {
+        width: 54.6875%; /* 700/1280 */
+        margin: 0 auto;
+    }
+}
+
+.e_form {
     .a_col {
         float: left;
-        width: 45%;
-        clear: left;
+        width: 50%;
+        background: #f1f1f1;
+        margin-right: $primary_margin;
+        padding: $baseline 0;
 
-        .hr {
-            display: block;
-            margin: 25px 0;
+        .img_container {
+            width: 62.5%; /* 400/640 */
+            margin: $baseline auto;
         }
     }
 
     .b_col {
-        float: right;
-        width: 45%;
-        max-width: 550px;
+        float: left;
+        width: 31.25%; /* 400/1280 */
+        margin-top: 10%;
+    }
+}
 
-        img {
+.lead {
+    float: left;
+    width: 60%;
+    margin-right: 10%;
+}
+
+.secondary {
+    float: left;
+    width: 28%;
+}
+
+.bio_contact {
+    .a_col,
+    .b_col {
+        float: left;
+        width: 31.25%; /* 400/1280 */
+    }
+
+    .a_col {
+        margin-left: 15.625%; /* 200/1280 */
+        margin-right: 6.25%; /* 80/1280 */
+        clear: left;
+
+        .hr {
             display: block;
+            margin: $baseline 0;
         }
+    }
+
+    .b_col {
+        /*max-width: 550px;*/
 
         .bauhaus {
             display: block;
-            height: 20px;
+            height: 5px;
         }
 
         .fib1 {
@@ -267,7 +527,7 @@ a:hover {
 }
 
 .social {
-    margin-top: 25px;
+    margin-top: $baseline;
 
     li {
         display: inline-block;
@@ -277,7 +537,7 @@ a:hover {
         a {
             svg {
                 display: block;
-                max-width: 30px;
+                max-width: 25px;
                 margin: 0 auto;
                 -webkit-transition: color 0.2s ease-out;
                 -moz-transition: color 0.2s ease-out;
@@ -322,7 +582,7 @@ a:hover {
         }
     }
 
-    .bio {
+    .bio_contact {
         margin-left: 8%;
         margin-right: 8%;
     }
@@ -352,7 +612,7 @@ a:hover {
         margin-right: 0;
     }
 
-    .a_form, .b_form, .c_form, .bio {
+    .a_form, .b_form, .c_form, .bio_contact {
         .a_col {
             width: 100%;
             float: none;
@@ -385,7 +645,7 @@ a:hover {
         background-position: -160px 0;
     }
 
-    .bio {
+    .bio_contact {
         margin-left: 8%;
         margin-right: 8%;
         padding-top: 230px;
